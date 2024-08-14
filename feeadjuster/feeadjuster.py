@@ -484,27 +484,27 @@ plugin.add_option(
     "feeadjuster-deactivate-fuzz",
     False,
     "Deactivate update threshold randomization and hysterisis.",
-    "flag",
+    "flag"
 )
 plugin.add_option(
     "feeadjuster-deactivate-fee-update",
     False,
     "Deactivate automatic fee updates for forward events.",
-    "flag",
+    "flag"
 )
 plugin.add_option(
     "feeadjuster-threshold",
     "0.05",
     "Relative channel balance delta at which to trigger an update. Default 0.05 means 5%. "
     "Note: it's also fuzzed by 1.5%",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-threshold-abs",
     "0.001btc",
     "Absolute channel balance delta at which to always trigger an update. "
     "Note: it's also fuzzed by 1.5%",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-enough-liquidity",
@@ -512,14 +512,14 @@ plugin.add_option(
     "Beyond this liquidity do not adjust fees. "
     "This also modifies the fee curve to achieve having this amount of liquidity. "
     "Default: '0msat' (turned off).",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-adjustment-method",
     "default",
     "Adjustment method to calculate channel fee"
     "Can be 'default', 'soft' for less difference or 'hard' for higher difference"
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-imbalance",
@@ -528,7 +528,7 @@ plugin.add_option(
     "Default: 0.5 (always). Set higher or lower values to limit feeadjuster's "
     "activity to more imbalanced channels. "
     "E.g. 0.3 for '70/30'% or 0.6 for '40/60'%.",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-feestrategy",
@@ -537,7 +537,7 @@ plugin.add_option(
     "Can be 'global' to use global config or default values, "
     "or 'median' to use the median fees from peers of peer "
     "Default: 'global'.",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-median-multiplier",
@@ -545,7 +545,7 @@ plugin.add_option(
     "Sets the factor with which the median fee is multiplied if using the fee strategy 'median'. "
     "This allows over or underbidding other nodes by a constant factor"
     "Default: '1.0'.",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-max-htlc-steps",
@@ -554,12 +554,12 @@ plugin.add_option(
     "This will reduce the max htlc according to available "
     "liquidity, which can reduce local routing channel failures."
     "A value of 0 disables the stepping.",
-    "string",
+    "string"
 )
 plugin.add_option(
     "feeadjuster-basefee",
     False,
     "Also adjust base fee dynamically. Currently only affects median strategy.",
-    "bool",
+    "bool"
 )
 plugin.run()
